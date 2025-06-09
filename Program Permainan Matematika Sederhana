@@ -1,0 +1,253 @@
+#include <iostream>
+#include <string>
+using namespace std;
+    struct Akun{
+        string password;
+        string nama;
+        int nim;
+    }satu;
+    
+    void salah(Akun&satu){
+    string login;
+    cout<<"======= Silahkan Login Kembali ========= " <<endl;
+    cout<<"Nama Anda = " <<satu.nama <<endl;
+    cout<<"NIM Anda = " <<satu.nim <<endl;
+    cout<<"Password Anda = ";
+    cin>>login;
+    
+    if(login == satu.password){
+        cout<<"Selamat Akun Anda Telah Berhasil Masuk";
+    }
+    else{
+        cout<<endl;
+        cout<<"------ Password Salah -------" <<endl;
+        cout<<endl;
+        salah(satu);
+        
+}
+    }
+    
+void penjumlahan1(){
+    int angka;
+    cout<<" 1. 20 + 29 = ";
+    cin>>angka;
+    if(angka == 49){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        penjumlahan1();
+    }
+}
+
+void penjumlahan2(){
+    int angka1;
+    cout<<" 2. 45 + 35 =  "; 
+    cin>>angka1;
+    if(angka1 == 80){
+        cout<<"Jawaban Benar";
+        cout<<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        penjumlahan2();
+    }
+}
+
+void penjumlahan3(){
+    int angka2;
+    cout<<" 3. 97 + 25 = ";
+    cin>>angka2;
+    if(angka2 == 122){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        penjumlahan3();
+    }
+}
+
+void pengurangan1(){
+    int kurang;
+    cout<<" 1. 12 - 5 = ";
+    cin>>kurang;
+    if(kurang == 7){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        pengurangan1();
+    }
+}
+
+void pengurangan2(){
+    double kurang1;
+    cout<<" 2. 5 - 10 = ";
+    cin>>kurang1;
+    if(kurang1 == -5){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        pengurangan2();
+    }
+}
+
+void pengurangan3(){
+    double kurang2;
+    cout<<" 3. 30 - 50 = ";
+    cin>>kurang2;
+    if(kurang2 == -20){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        pengurangan3();
+    }
+}
+void perkalian1(){
+    int kali1;
+    cout<<" 1. 2 x 5 = ";
+    cin>>kali1;
+    if(kali1 == 10){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        perkalian1();
+    }
+}
+
+void perkalian2(){
+    int kali2;
+    cout<<" 2. 6 x 5 = " <<endl;
+    cin>>kali2;
+    if(kali2 == 30){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        perkalian2();
+    }
+}
+
+void perkalian3(){
+    int kali3;
+    cout<<"3. 9 x 8 = ";
+    cin>>kali3;
+    if(kali3 == 72){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        perkalian3();
+    }
+}
+
+void pembagian1(){
+    float bagi1;
+    cout<<"1. 12 : 6 = ";
+    cin>>bagi1;
+    if(bagi1 == 2){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        pembagian1();
+    }
+}
+void pembagian2(){
+    float bagi2;
+    cout<<" 2. 81 : 9 =  ";
+    cin>>bagi2;
+    if(bagi2 == 9){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        pembagian2();
+    }
+}
+
+void pembagian3(){
+    float bagi3;
+    cout<<" 3. 75 : 3 = ";
+    cin>>bagi3;
+    if(bagi3 == 25){
+        cout<<"Jawaban Benar" <<endl;
+    }
+    else{
+        cout<<"Jawaban Salah" <<endl;
+        pembagian3();
+    }
+}
+
+int main(){
+    int nomor;
+    Akun satu;
+cout<<" ====================================================== " <<endl;
+cout<<" ============ Play Game Operation Math ================ " <<endl;
+cout<<" ====================================================== " <<endl;
+cout<<endl;
+  cout<<" ====== Buat Akun Terlebih Dahulu ========== " <<endl;
+    cout<<"Masukkan Nama = ";
+    getline(cin, satu.nama);
+    cout<<"Masukkan Nim = ";
+    cin>>satu.nim;
+    cout<<"Buat Password = ";
+    cin>>satu.password;
+    
+    cout<<endl;
+    
+    salah(satu);
+    cout<<endl <<endl;
+    
+    cout<<"====== Jawab Pertanyaan Tersebut ====== " <<endl;
+    cout<<"-------- Pilih Model Soal Matematika ------ " <<endl;
+    cout<<" 1. Penjumlahan " <<endl <<" 2. Pengurangan " <<endl <<" 3. Perkalian " <<endl <<" 4.Pembagian " <<endl;
+    cout<<"Masukkan Nomor Pilihan ( 1 - 4 )  = ";
+    cin>>nomor;
+    switch(nomor){
+        case 1:
+        penjumlahan1(); 
+        cout<<endl;
+        penjumlahan2(); 
+        cout<<endl;
+        penjumlahan3();
+        cout<<endl;
+        break;
+        
+        case 2 :
+        pengurangan1();
+        cout<<endl;
+        pengurangan2();
+        cout<<endl;
+        pengurangan3();
+        cout<<endl;
+        break;
+        
+        case 3:
+        perkalian1();
+        cout<<endl;
+        perkalian2();
+        cout<<endl;
+        perkalian3();
+        cout<<endl;
+        break;
+        
+        case 4:
+        pembagian1();
+        cout<<endl;
+        pembagian2();
+        cout<<endl;
+        pembagian3();
+        cout<<endl;
+        break;
+        
+        default :
+        cout<<"Tidak Valid" <<endl;
+        break;
+    }
+    return 0;
+}
+    
